@@ -8,7 +8,7 @@ interface PageProps {
 /**
  * Styled component - single column, neutral background 
  */
-function Page<PageProps>({ children, pageStyles = '' }) {
+const Page: React.FC<PageProps> = ({ children, pageStyles = '' }) => {
     return (
         <div className={`bg-site-neutrals-200 h-screen grid-cols-1 grid place-items-center ${pageStyles}`}>
             {children}

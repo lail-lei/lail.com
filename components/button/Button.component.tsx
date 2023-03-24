@@ -9,7 +9,7 @@ export interface ButtonType {
     buttonStyles?: string
 }
 
-function Button<ButtonType>({ text, url, buttonColor, textColor, onSubmit, buttonStyles }) {
+const Button: React.FC<ButtonType> = ({ text, url, buttonColor, textColor, onSubmit, buttonStyles }) => {
     return <div></div>
 }
 

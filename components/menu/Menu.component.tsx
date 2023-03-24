@@ -7,23 +7,17 @@ interface MenuProps {
 
 export interface MenuOption extends ButtonType {
     icon?: string;
-    text: string;
-    url?: string;
-    buttonColor?: string;
-    textColor?: string;
-    onSubmit?: Function;
-    buttonStyles?: string
 }
 
 /**
  * Limit of 12 menu items
  */
-function Menu<MenuProps>({ options }) {
+const Menu: React.FC<MenuProps> = ({ options }) => {
 
     const createOptions = () => {
         return options.map((option: MenuOption, index: number) => {
             // if option.icon, return icon
-            //  return <Button key={index} {...option} />
+            return <Button key={index} {...option} />
         })
 
     }
