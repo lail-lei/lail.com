@@ -1,0 +1,32 @@
+{
+  "name": "lail.com",
+  "version": "1.0.0",
+  "description": "professional personal website. resume, contact information + links to side projects",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lail-lei/lail.com.git"
+  },
+  "author": "lailei forouraghi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lail-lei/lail.com/issues"
+  },
+  "homepage": "https://github.com/lail-lei/lail.com#readme",
+  "dependencies": {
+    "next": "^13.2.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.15.7",
+    "@types/react": "18.0.29",
+    "typescript": "5.0.2"
+  }
+}
