@@ -8,6 +8,13 @@
 		"ghcr.io/devcontainers-contrib/features/amplify-cli:2": {},
 		"ghcr.io/devcontainers-contrib/features/npm-package:1": {},
 		"ghcr.io/devcontainers-contrib/features/typescript:2": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"esbenp.prettier-vscode"
+			]
+		}
 	}
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
