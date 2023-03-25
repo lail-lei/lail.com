@@ -1,7 +1,8 @@
-import React from "react";
+import React from 'react';
+import { Page } from '../../components';
 
-function Resume () {
-    return <div>hello</div>
-}  
+function Resume() {
+  return <Page></Page>;
+}
 
 export default Resume;
