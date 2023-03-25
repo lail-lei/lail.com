@@ -11,7 +11,7 @@ export const whimsies: Array<WhimsyType> = [
     {
         url: '',
         title: 'aeki pick race',
-        description: 'compare various computer-generated pick paths at labyrinthine norwegian furniture store aeki',
+        description: 'compare various computer-generated pick paths at labyrinthine Norwegian furniture store AEKI',
         disabled: true,
     },
 
