@@ -16,7 +16,7 @@ const Button: React.FC<ButtonType> = ({
   text,
   url,
   onSubmit,
-  buttonStyles,
+  buttonStyles = '',
   iconUrl,
   altText,
 }) => {
@@ -37,7 +37,7 @@ const Button: React.FC<ButtonType> = ({
           items-center
           gap-4
           w-full
-          h-12 ${buttonStyles ? buttonStyles : ''}`}
+          h-12 ${buttonStyles}`}
       >
         {iconUrl && (
           <div className='w-1/6 flex justify-center'>
