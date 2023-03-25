@@ -3,8 +3,6 @@ import React, { ReactNode } from 'react';
 interface CardProps {
   children?: ReactNode;
   cardStyles?: string;
-  isCollapsable?: boolean;
-  collapsed?: boolean;
 }
 
 /**
