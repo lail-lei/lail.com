@@ -1,54 +1,6 @@
 import { ResumeCard as ResumeCardType } from "../pages/resume/types";
 
 export const resumeCards: Array<ResumeCardType> = [
-
-    {
-
-        company: 'Viddler',
-        description: 'A SAAS startup specializing in video marketing software',
-        iconURL: '',
-        positions: [
-            {
-                title: 'Web Developer',
-                date: 'April 2018 - December 2018',
-                iconURL: '',
-                accomplishments: ['Built marketing site.',
-                    'Built tools + experiences for trade shows'],
-                tools: ['vanilla javascript', 'css/scss', 'html', 'wordpress'],
-                funFacts: ['Created a shiba-inu-themed web tool that ranked trade show attendees social media prescence. Included fuzzy search when looking up client names.']
-            },
-            {
-                title: 'UI Developer',
-                date: 'December 2018 - March 2020',
-                iconURL: '',
-                accomplishments: ['Coded prototypes of video-editing and rewards-store applications.'],
-                tools: ['react.js'],
-                funFacts: ['juggled work while beginning master degree'],
-            }
-        ]
-
-    },
-
-    {
-
-        company: `St Joseph's University`,
-        description: 'Philadelphia-based private university',
-        iconURL: '',
-        positions: [
-            {
-                title: 'Graduate Teaching Assistant (Computer + Data Science)',
-                date: 'Aug 2020 - Dec 2021',
-                iconURL: '',
-                accomplishments: ['Led weekly recitation sessions for undergraduate-level Object-Oriented Design and Data Structures.',
-                    'Led weekly open labs available to all undergraduate computer science students.', 'Graded homework, labs, and quizzes'],
-                funFacts: ['Between classes, I finetuned GPT-2 to generate realistic cupcake recipes (this was well before ChatGPT)',
-                    'I also built out several Node.js microservices - including a sophisticate search and recommendation engine based on Elasticsearch'],
-                tools: ['pytorch', 'gpt-2', 'huggingface', 'elasticsearch', 'python', 'node.js', 'express.js', 'react.js', 'redux', 'mongodb', 'mysql'],
-            }
-        ]
-
-    },
-
     {
 
         company: `IKEA`,
@@ -75,6 +27,54 @@ export const resumeCards: Array<ResumeCardType> = [
         ]
 
     },
+
+    {
+
+        company: `St Joseph's University`,
+        description: 'Philadelphia-based private university',
+        iconURL: '',
+        positions: [
+            {
+                title: 'Graduate Teaching Assistant',
+                date: 'Aug 2020 - Dec 2021',
+                iconURL: '',
+                accomplishments: ['Led weekly recitation sessions for undergraduate-level Object-Oriented Design and Data Structures.',
+                    'Led weekly open labs available to all undergraduate computer science students.', 'Graded homework, labs, and quizzes'],
+                funFacts: ['Between classes, I finetuned GPT-2 to generate realistic cupcake recipes (this was well before ChatGPT)',
+                    'I also built out several Node.js microservices - including a sophisticate search and recommendation engine based on Elasticsearch'],
+                tools: ['pytorch', 'gpt-2', 'huggingface', 'elasticsearch', 'python', 'node.js', 'express.js', 'react.js', 'redux', 'mongodb', 'mysql'],
+            }
+        ]
+
+    },
+
+    {
+        company: 'Viddler',
+        description: 'A SAAS startup specializing in video marketing software',
+        iconURL: '',
+        positions: [
+            {
+                title: 'UI Developer',
+                date: 'December 2018 - March 2020',
+                iconURL: '',
+                accomplishments: ['Coded prototypes of video-editing and rewards-store applications.'],
+                tools: ['react.js'],
+                funFacts: ['juggled work while beginning master degree'],
+            },
+            {
+                title: 'Web Developer',
+                date: 'April 2018 - December 2018',
+                iconURL: '',
+                accomplishments: ['Built marketing site.',
+                    'Built tools + experiences for trade shows'],
+                tools: ['vanilla javascript', 'css/scss', 'html', 'wordpress'],
+                funFacts: ['Created a shiba-inu-themed web tool that ranked trade show attendees social media prescence. Included fuzzy search when looking up client names.']
+            }
+        ]
+
+    },
+
+
 
 
 ];
