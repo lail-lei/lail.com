@@ -3,10 +3,11 @@
  */
 module.exports = {
   content: [
-     "./pages/**/*.{js,ts,jsx,tsx}",
-     "./components/**/*.{js,ts,jsx,tsx}",
-   ],
-   theme: {
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './constants/**/*.{js,ts,jsx,tsx}',
+  ],
+  theme: {
     accentColor: ({ theme }) => ({
       ...theme('colors'),
       auto: 'auto',
@@ -46,13 +47,17 @@ module.exports = {
     backgroundImage: {
       none: 'none',
       'gradient-to-t': 'linear-gradient(to top, var(--tw-gradient-stops))',
-      'gradient-to-tr': 'linear-gradient(to top right, var(--tw-gradient-stops))',
+      'gradient-to-tr':
+        'linear-gradient(to top right, var(--tw-gradient-stops))',
       'gradient-to-r': 'linear-gradient(to right, var(--tw-gradient-stops))',
-      'gradient-to-br': 'linear-gradient(to bottom right, var(--tw-gradient-stops))',
+      'gradient-to-br':
+        'linear-gradient(to bottom right, var(--tw-gradient-stops))',
       'gradient-to-b': 'linear-gradient(to bottom, var(--tw-gradient-stops))',
-      'gradient-to-bl': 'linear-gradient(to bottom left, var(--tw-gradient-stops))',
+      'gradient-to-bl':
+        'linear-gradient(to bottom left, var(--tw-gradient-stops))',
       'gradient-to-l': 'linear-gradient(to left, var(--tw-gradient-stops))',
-      'gradient-to-tl': 'linear-gradient(to top left, var(--tw-gradient-stops))',
+      'gradient-to-tl':
+        'linear-gradient(to top left, var(--tw-gradient-stops))',
     },
     backgroundOpacity: ({ theme }) => theme('opacity'),
     backgroundPosition: {
@@ -133,8 +138,7 @@ module.exports = {
       200: '2',
     },
     caretColor: ({ theme }) => theme('colors'),
-    colors: 
-    ({ colors }) => ({
+    colors: ({ colors }) => ({
       inherit: colors.inherit,
       current: colors.current,
       transparent: colors.transparent,
@@ -162,8 +166,17 @@ module.exports = {
       fuchsia: colors.fuchsia,
       pink: colors.pink,
       rose: colors.rose,
-      'site-pink': '#FFD4D4',
-      'site-neutrals': {
+      'site-pink': {
+        100: '#FFD4D4',
+        200: '#D864A9',
+      },
+      'site-gold': '#EBB02D',
+      'site-blue': '#2d68eb',
+      'site-green': {
+        100: '#CDE990',
+        200: '#AACB73',
+      },
+      'site-neutral': {
         100: '#FFF6EA',
         200: '#F7E9D7',
         300: '#EBD8C3',
@@ -326,7 +339,15 @@ module.exports = {
         '"Segoe UI Symbol"',
         '"Noto Color Emoji"',
       ],
-      serif: ['Inconsolata', 'ui-serif', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
+      serif: [
+        'Inconsolata',
+        'ui-serif',
+        'Georgia',
+        'Cambria',
+        '"Times New Roman"',
+        'Times',
+        'serif',
+      ],
       mono: [
         'ui-monospace',
         'SFMono-Regular',
@@ -766,10 +787,10 @@ module.exports = {
       150: '1.5',
     },
     screens: {
-      sm: '640px',
-      md: '768px',
-      lg: '1024px',
-      xl: '1280px',
+      tablet: '640px',
+      'small-laptop': '768px',
+      laptop: '1024px',
+      desktop: '1280px',
       '2xl': '1536px',
     },
     scrollMargin: ({ theme }) => ({
@@ -901,7 +922,8 @@ module.exports = {
       all: 'all',
       DEFAULT:
         'color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter',
-      colors: 'color, background-color, border-color, text-decoration-color, fill, stroke',
+      colors:
+        'color, background-color, border-color, text-decoration-color, fill, stroke',
       opacity: 'opacity',
       shadow: 'box-shadow',
       transform: 'transform',
@@ -975,4 +997,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};
