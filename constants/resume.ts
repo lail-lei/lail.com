@@ -5,12 +5,12 @@ export const resumeCards: Array<ResumeCardType> = [
 
         company: `IKEA`,
         description: 'the famed Swedish meatball, shark plushie, and furniture store',
-        iconURL: '',
+        iconURL: '/ikea-icon.png',
         positions: [
             {
                 title: 'Software Engineer',
                 date: 'Feb 2022 - present',
-                iconURL: '',
+                iconURL: '/crocs-icon.png',
                 accomplishments: [
                     'Co-team lead on zone picking application. Built sophisticated mobile FE (React.JS and Capacitor) over 6 months',
                     'Wrote algorithms for optimizing pick path in IKEA stores.',
@@ -21,7 +21,7 @@ export const resumeCards: Array<ResumeCardType> = [
                     'Built node.js micro service (in GCP).',
                     'Built multi-page A/B tests involving dynamically rendered elements',
                 ],
-                funFacts: ['some stores have better meatballs than others', 'I wear blue and yellow crocs for special IKEA occasions'],
+                funFacts: [`My boss called me "the international ambassador"`, 'I wear blue and yellow crocs for special IKEA occasions'],
                 tools: ['react.js', 'typescript', 'redux', 'capacitor (by ionic)', 'node.js', 'express.js', 'google cloud platform', 'gcp cloud functions', 'gcp api gateway', 'firestore', 'optimizely', 'google analytics'],
             }
         ]
@@ -32,17 +32,17 @@ export const resumeCards: Array<ResumeCardType> = [
 
         company: `St Joseph's University`,
         description: 'Philadelphia-based private university',
-        iconURL: '',
+        iconURL: '/graduation-cap-icon.png',
         positions: [
             {
                 title: 'Graduate Teaching Assistant',
                 date: 'Aug 2020 - Dec 2021',
-                iconURL: '',
+                iconURL: '/r2d2-icon.png',
                 accomplishments: ['Led weekly recitation sessions for undergraduate-level Object-Oriented Design and Data Structures.',
                     'Led weekly open labs available to all undergraduate computer science students.', 'Graded homework, labs, and quizzes'],
                 funFacts: ['Between classes, I finetuned GPT-2 to generate realistic cupcake recipes (this was well before ChatGPT)',
                     'I also built out several Node.js microservices - including a sophisticate search and recommendation engine based on Elasticsearch'],
-                tools: ['pytorch', 'gpt-2', 'huggingface', 'elasticsearch', 'python', 'node.js', 'express.js', 'react.js', 'redux', 'mongodb', 'mysql'],
+                tools: ['pytorch', 'jupyter notebook', 'gpt-2', 'huggingface', 'elasticsearch', 'python', 'node.js', 'express.js', 'react.js', 'redux', 'mongodb', 'mysql', 'aws (s3)'],
             }
         ]
 
@@ -51,7 +51,7 @@ export const resumeCards: Array<ResumeCardType> = [
     {
         company: 'Viddler',
         description: 'A SAAS startup specializing in video marketing software',
-        iconURL: '',
+        iconURL: '/viddler-icon.png',
         positions: [
             {
                 title: 'UI Developer',
@@ -64,7 +64,7 @@ export const resumeCards: Array<ResumeCardType> = [
             {
                 title: 'Web Developer',
                 date: 'April 2018 - December 2018',
-                iconURL: '',
+                iconURL: '/shiba-icon.png',
                 accomplishments: ['Built marketing site.',
                     'Built tools + experiences for trade shows'],
                 tools: ['vanilla javascript', 'css/scss', 'html', 'wordpress'],

@@ -9,7 +9,7 @@ export interface ResumeCard {
 export interface JobDetails {
     title: string;
     date: string;
-    iconURL: '',
+    iconURL: string,
     accomplishments: Array<string>;
     tools: Array<string>;
     funFacts?: Array<string>;
