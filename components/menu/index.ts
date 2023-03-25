@@ -1,2 +1,1 @@
-export {default} from './Menu.component';
-export type {MenuOption} from './Menu.component';
+export {default as Menu} from './Menu.component';
