@@ -1,1 +1,1 @@
-export * from './Subheading.component';
+export { default as Subheading } from './Subheading.component';

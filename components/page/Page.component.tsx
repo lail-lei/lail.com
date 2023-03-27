@@ -11,7 +11,7 @@ interface PageProps {
 const Page: React.FC<PageProps> = ({ children, pageStyles = '' }) => {
   return (
     <div
-      className={`transition-all bg-site-neutral-200 h-screen grid-cols-1 grid place-items-center ${pageStyles}`}
+      className={`transition-all bg-site-neutral-200 min-h-screen grid-cols-1 grid place-items-center ${pageStyles}`}
     >
       {children}
     </div>

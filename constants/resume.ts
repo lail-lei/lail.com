@@ -8,21 +8,35 @@ export const resumeCards: Array<ResumeCardType> = [
         iconURL: '/ikea-icon.png',
         positions: [
             {
-                title: 'Software Engineer',
+                title: 'Software Engineer - Fulfillment',
                 date: 'Feb 2022 - present',
                 iconURL: '/crocs-icon.png',
+                altText: 'blue and yellow crocs',
                 accomplishments: [
-                    'Co-team lead on zone picking application. Built sophisticated mobile FE (React.JS and Capacitor) over 6 months',
-                    'Wrote algorithms for optimizing pick path in IKEA stores.',
-                    'Provided mentorship to other engineers on React.js and Redux best practices. Taught other devs git commands and practices.',
-                    'Built micro frontends for customer facing website.',
-                    'Facilitated conversation/collaboration between international teams',
-                    'Created system design documents and wrote documentation.',
-                    'Built node.js micro service (in GCP).',
-                    'Built multi-page A/B tests involving dynamically rendered elements',
+                    'Lead frontend engineer on zone-picking application. Led team of four FE/FS engineers',
+                    'Provided mentorship to teammates on React.js and Redux best practices.',
+                    'Built sophisticated mobile FE (React.js and Ionic Capacitor.js) over 6 months.',
+                    'Wrote algorithms to optimize coworker pick path in IKEA stores.',
+                    'Collaborated with BE/FS engineers on REST API design.'
                 ],
-                funFacts: [`My boss called me "the international ambassador"`, 'I wear blue and yellow crocs for special IKEA occasions'],
-                tools: ['react.js', 'typescript', 'redux', 'capacitor (by ionic)', 'node.js', 'express.js', 'google cloud platform', 'gcp cloud functions', 'gcp api gateway', 'firestore', 'optimizely', 'google analytics'],
+                funFacts: ['I wear blue and yellow crocs for special IKEA occasions'],
+                tools: ['react.js', 'typescript', 'redux', 'capacitor (by ionic)', 'google analytics'],
+            },
+            {
+                title: 'Software Engineer - CX',
+                date: 'Feb 2022 - present',
+                iconURL: '',
+                altText: '',
+                accomplishments: [
+                    'Built performant micro-frontends for customer facing website.',
+                    'Built Node.js micro service (in GCP).',
+                    'Built sophisticated multi-page A/B tests, altering dynamically-rendered components',
+                    'Built micro frontends for customer facing website.',
+                    'Facilitated collaboration between international teams.',
+                    'Created system design documents and wrote documentation.',
+                ],
+                funFacts: [`My boss called me "the international ambassador"`],
+                tools: ['react.js', 'typescript', 'node.js', 'express.js', 'google cloud platform', 'gcp cloud functions', 'gcp api gateway', 'firestore', 'optimizely', 'google analytics'],
             }
         ]
 
@@ -38,6 +52,7 @@ export const resumeCards: Array<ResumeCardType> = [
                 title: 'Graduate Teaching Assistant',
                 date: 'Aug 2020 - Dec 2021',
                 iconURL: '/r2d2-icon.png',
+                altText: 'r2d2',
                 accomplishments: ['Led weekly recitation sessions for undergraduate-level Object-Oriented Design and Data Structures.',
                     'Led weekly open labs available to all undergraduate computer science students.', 'Graded homework, labs, and quizzes'],
                 funFacts: ['Between classes, I finetuned GPT-2 to generate realistic cupcake recipes (this was well before ChatGPT)',
@@ -57,6 +72,7 @@ export const resumeCards: Array<ResumeCardType> = [
                 title: 'UI Developer',
                 date: 'December 2018 - March 2020',
                 iconURL: '',
+                altText: '',
                 accomplishments: ['Coded prototypes of video-editing and rewards-store applications.'],
                 tools: ['react.js'],
                 funFacts: ['juggled work while beginning master degree'],
@@ -65,8 +81,9 @@ export const resumeCards: Array<ResumeCardType> = [
                 title: 'Web Developer',
                 date: 'April 2018 - December 2018',
                 iconURL: '/shiba-icon.png',
+                altText: 'winking shiba inu',
                 accomplishments: ['Built marketing site.',
-                    'Built tools + experiences for trade shows'],
+                    'Built tools + web experiences for trade shows'],
                 tools: ['vanilla javascript', 'css/scss', 'html', 'wordpress'],
                 funFacts: ['Created a shiba-inu-themed web tool that ranked trade show attendees social media prescence. Included fuzzy search when looking up client names.']
             }

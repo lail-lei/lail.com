@@ -11,7 +11,7 @@ const Subheading: React.FC<SubheadingProps> = ({
 }) => {
   return (
     <h2
-      className={`text-xl small-laptop:text-2xl text-center tracking-widest text-amber-900 font-serif ${subheadingStyles}`}
+      className={`text-2xl tracking-widest text-amber-900 font-serif ${subheadingStyles}`}
     >
       {text}
     </h2>
