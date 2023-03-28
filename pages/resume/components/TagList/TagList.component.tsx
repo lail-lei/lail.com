@@ -8,8 +8,8 @@ const TagList: React.FC<ListProps> = ({
 }) => {
   return (
     <ResumeList
-      listStyles={`px-0.5 py-0.5 items-center list-none flex flex-row flex-wrap bg-site-neutral-200 rounded p-1 ${listStyles}`}
-      listItemStyles={`font-bold w-fit h-[30px] leading-[30px] px-1 bg-site-neutral-100 m-1 rounded ${listItemStyles}`}
+      listStyles={`w-full px-0.5 py-0.5 items-center min-h-[50px] list-none flex flex-row flex-wrap bg-site-neutral-200 rounded p-1 ${listStyles}`}
+      listItemStyles={`text-xs font-bold w-fit h-[30px] leading-[30px] px-1 bg-site-neutral-100 m-1 rounded ${listItemStyles || ''}`}
       items={items}
     />
   );
