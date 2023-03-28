@@ -1,35 +1,25 @@
 import React, { useState } from 'react';
-import { Heading, Page } from '../../components';
+import { Card, Heading, Page } from '../../components';
+import CardAccordion from '../../components/card-accordion/CardAccordion.component';
 import { resumeCards } from '../../constants';
 import ResumeCard from './components/ResumeCard/ResumeCard.component';
 import { ResumeCard as ResumeCardType } from './types';
 
 function Resume() {
-  const [expandedCardIndex, setExpandedCard] = useState(0);
-
-  const renderCards = () => {
-    return resumeCards.map((card: ResumeCardType, index: number) => {
-      return (
-        <ResumeCard
-          key={index}
-          {...card}
-          collapsed={expandedCardIndex !== index}
-          onClick={() => setExpandedCard(index)}
-        />
-      );
-    });
+  const renderResumeCards = () => {
+    return resumeCards.map((card: ResumeCardType, index: number) => <ResumeCard
+      key={index}
+      {...card}
+    />);
   };
 
   return (
-    <Page pageStyles={'auto-rows-max gap-4'}>
-      {
-        <div className='grid gap-2 place-items-center pb-10'>
-          <Heading text='Resume' headingStyles='my-5' />
-          {renderCards()}
-        </div>
-      }
+    <Page pageStyles='gap-10 py-10'>
+      <Heading text={'Resume'} />
+      <CardAccordion width='11/12'>{renderResumeCards()}</CardAccordion>
     </Page>
   );
 }
+
 
 export default Resume;

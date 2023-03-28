@@ -20,7 +20,7 @@ const FunFact: React.FC<{
   if (funFacts.length === 0) return <></>;
   return (
     <div
-      className='grid gap-0.5 small-laptop:gap-1 grid-row w-full h-full'
+      className='grid grid-rows-1 gap-5'
     >
       <Button
         text={
@@ -28,7 +28,6 @@ const FunFact: React.FC<{
             ? `out of fun facts :/`
             : `generate fun fact about my time here`
         }
-        buttonStyles={`w-full px-3 text-sm self-center mb-2 text-site-pink-200 ${styles}`}
         iconURL={'/fun-fact-icon.png'}
         altText={'fun fact icon'}
         iconSize={25}
