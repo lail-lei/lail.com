@@ -1,6 +1,6 @@
 import React from 'react';
 import { Subheading } from '../subheading';
-import { Icon } from './components';
+import { Icon } from '../Icon';
 
 export interface IllustratedTextProps {
   text: string;
