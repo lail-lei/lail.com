@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { MouseEventHandler, useEffect, useRef } from 'react';
 import { Card, IllustratedText } from '../../../../components';
 import {
   ResumeCard as ResumeCardType,
@@ -10,6 +10,7 @@ import TagList from '../TagList/TagList.component';
 
 export interface ResumeCardProps extends ResumeCardType {
   collapsed?: boolean;
+  onClick?: MouseEventHandler;
 }
 
 const companyNameStyle = 'text-base font-extrabold';
@@ -26,14 +27,14 @@ const PositionContent: React.FC<JobDetailsType> = ({
   return (
     <div
       className={
-        'flex flex-col gap-1.5 w-full h-full bg-site-neutral-100 small-laptop:px-5'
+        'flex flex-col gap-1.5 w-full h-full bg-site-neutral-100 small-laptop:px-5 transition-all duration-100 '
       }
     >
       <IllustratedText
         text={title}
         iconURL={iconURL}
         altText={altText}
-        iconSize={50}
+        iconSize={40}
         textStyles={'text-sm font-bold'}
       />
       <p className={'text-sm text-left text-amber-900'}>{date}</p>
@@ -43,7 +44,7 @@ const PositionContent: React.FC<JobDetailsType> = ({
         listItemStyles={'mb-2.5 small-laptop:text-base'}
         items={accomplishments}
       />
-      <div className='flex flex-col gap-5 small-laptop:flex-row'>
+      <div className='flex flex-col gap-5 small-laptop:flex-row transition-all duration-100'>
         <TagList
           items={tools}
           listStyles={'small-laptop:w-1/2 small-laptop:mb-5'}
@@ -61,33 +62,68 @@ const ResumeCard: React.FC<ResumeCardProps> = ({
   iconURL,
   altText,
   collapsed,
+  onClick,
 }) => {
-  const mostRecentJobTitle = positions[positions.length - 1].title;
+  const ref = useRef(null);
   const hiddenClass = 'h-0 overflow-hidden p-0 m-0 border-y-0';
   const renderAllPositions = (): Array<JSX.Element> => {
     return positions.map((position: JobDetailsType, index: number) => (
       <PositionContent key={index} {...position} />
     ));
   };
+
+  const scrollToRef = () => {
+    if (!ref.current) return;
+    ref.current.scrollIntoView({
+      block: 'start',
+      inline: 'nearest',
+      behavior: 'smooth',
+    });
+  };
+
+  useEffect(() => {
+    let scrollTimer: ReturnType<typeof setTimeout>;
+    if (!collapsed) {
+      scrollTimer = setTimeout(() => scrollToRef(), 50);
+    }
+    return () => clearTimeout(scrollTimer);
+  }, [collapsed]);
+
   return (
-    <Card>
+    <Card onClick={onClick} cardStyles={'transition-all duration-100 rounded'}>
       <div
-        className={'w-full py-2.5 px-5 flex flex-col small-laptop:gap-4 gap-2'}
+        ref={ref}
+        className={`w-full py-2.5 px-5 flex flex-col transition-all duration-100 ${
+          collapsed ? `cursor-pointer gap-0` : `small-laptop:gap-4 gap-2`
+        }`}
       >
         <IllustratedText
           iconURL={iconURL}
           altText={altText}
-          iconSize={64}
+          iconSize={collapsed ? 40 : 60}
           text={company}
           textStyles={companyNameStyle}
           subheading
         />
+        {collapsed && (
+          <IllustratedText
+            text={positions[0].title}
+            iconURL={''}
+            altText={''}
+            iconSize={50}
+            textStyles={'text-sm font-bold'}
+          />
+        )}
 
         <p className={`${collapsed ? hiddenClass : ''} text-sm pl-5`}>
           {description}
         </p>
-        <div className={`bg-site-neutral-300 ${collapsed ? hiddenClass : ''}`}>
-          {!collapsed && renderAllPositions()}
+        <div
+          className={`bg-site-neutral-300 transition-all duration-100 ${
+            collapsed ? hiddenClass : ''
+          }`}
+        >
+          {renderAllPositions()}
         </div>
       </div>
     </Card>

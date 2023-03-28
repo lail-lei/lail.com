@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Button, Subheading } from '../../../../components';
 
 const FunFact: React.FC<{
@@ -7,6 +7,24 @@ const FunFact: React.FC<{
 }> = ({ funFacts, styles = '' }) => {
   const [factIndex, setFactIndex] = useState<null | number>(null);
   const disabled = factIndex !== null && funFacts.length === 1;
+
+  const ref = useRef(null);
+
+  useEffect(() => {
+    let scrollTimer: ReturnType<typeof setTimeout> = setTimeout(() => {
+      if (factIndex !== null) scrollToRef();
+    }, 50);
+
+    return () => clearTimeout(scrollTimer);
+  }, [factIndex]);
+
+  const scrollToRef = () => {
+    if (!ref.current) return;
+    ref.current.scrollIntoView({
+      inline: 'nearest',
+      behavior: 'smooth',
+    });
+  };
 
   const getRandomNextFactIndex = () => {
     let newIndex: number = Math.floor(Math.random() * funFacts.length);
@@ -19,7 +37,10 @@ const FunFact: React.FC<{
 
   if (funFacts.length === 0) return <></>;
   return (
-    <div className='grid gap-0.5 small-laptop:gap-1 grid-row w-full h-full'>
+    <div
+      className='grid gap-0.5 small-laptop:gap-1 grid-row w-full h-full'
+      ref={ref}
+    >
       <Button
         text={
           disabled
