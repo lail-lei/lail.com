@@ -72,30 +72,12 @@ const ResumeCard: React.FC<ResumeCardProps> = ({
     ));
   };
 
-  const scrollToRef = () => {
-    if (!ref.current) return;
-    ref.current.scrollIntoView({
-      block: 'start',
-      inline: 'nearest',
-      behavior: 'smooth',
-    });
-  };
-
-  useEffect(() => {
-    let scrollTimer: ReturnType<typeof setTimeout>;
-    if (!collapsed) {
-      scrollTimer = setTimeout(() => scrollToRef(), 50);
-    }
-    return () => clearTimeout(scrollTimer);
-  }, [collapsed]);
-
   return (
     <Card onClick={onClick} cardStyles={'transition-all duration-100 rounded'}>
       <div
         ref={ref}
-        className={`w-full py-2.5 px-5 flex flex-col transition-all duration-100 ${
-          collapsed ? `cursor-pointer gap-0` : `small-laptop:gap-4 gap-2`
-        }`}
+        className={`w-full py-2.5 px-5 flex flex-col transition-all duration-100 ${collapsed ? `cursor-pointer gap-0` : `small-laptop:gap-4 gap-2`
+          }`}
       >
         <IllustratedText
           iconURL={iconURL}
@@ -119,9 +101,8 @@ const ResumeCard: React.FC<ResumeCardProps> = ({
           {description}
         </p>
         <div
-          className={`bg-site-neutral-300 transition-all duration-100 ${
-            collapsed ? hiddenClass : ''
-          }`}
+          className={`bg-site-neutral-300 transition-all duration-100 ${collapsed ? hiddenClass : ''
+            }`}
         >
           {renderAllPositions()}
         </div>

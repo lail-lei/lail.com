@@ -8,24 +8,6 @@ const FunFact: React.FC<{
   const [factIndex, setFactIndex] = useState<null | number>(null);
   const disabled = factIndex !== null && funFacts.length === 1;
 
-  const ref = useRef(null);
-
-  useEffect(() => {
-    let scrollTimer: ReturnType<typeof setTimeout> = setTimeout(() => {
-      if (factIndex !== null) scrollToRef();
-    }, 50);
-
-    return () => clearTimeout(scrollTimer);
-  }, [factIndex]);
-
-  const scrollToRef = () => {
-    if (!ref.current) return;
-    ref.current.scrollIntoView({
-      inline: 'nearest',
-      behavior: 'smooth',
-    });
-  };
-
   const getRandomNextFactIndex = () => {
     let newIndex: number = Math.floor(Math.random() * funFacts.length);
     if (factIndex === null) return newIndex;
@@ -39,7 +21,6 @@ const FunFact: React.FC<{
   return (
     <div
       className='grid gap-0.5 small-laptop:gap-1 grid-row w-full h-full'
-      ref={ref}
     >
       <Button
         text={
@@ -60,9 +41,8 @@ const FunFact: React.FC<{
       <Subheading
         text={funFacts[factIndex]}
         size='sm'
-        subheadingStyles={`w-full h-full text-black text-sm bg-site-pink-100 ${
-          factIndex === null ? '' : 'p-2'
-        } rounded`}
+        subheadingStyles={`w-full h-full text-black text-sm bg-site-pink-100 ${factIndex === null ? '' : 'p-2'
+          } rounded`}
       />
     </div>
   );
