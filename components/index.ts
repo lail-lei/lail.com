@@ -5,3 +5,4 @@ export * from './subheading';
 export * from './menu';
 export * from './button';
 export * from './illustrated-text';
+export * from './Icon';
