@@ -24,7 +24,7 @@ const PositionContent: React.FC<JobDetailsType> = ({
   funFacts,
 }) => {
   return (
-    <div className='grid grid-cols-1 gap-4 mb-10'>
+    <div className='grid grid-cols-1 gap-4 mb-10 w-full'>
       <IllustratedText
         text={title}
         iconURL={iconURL}
@@ -81,10 +81,9 @@ const ResumeCard: React.FC<ResumeCardProps> = ({
       <p className='text-sm px-2 py-5'>
         {description}
       </p>
-      <div
-      >
-        {renderAllPositions()}
-      </div>
+
+      {renderAllPositions()}
+
 
     </Card>
   );
