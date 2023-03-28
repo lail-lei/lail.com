@@ -5,7 +5,7 @@ export interface ButtonType {
   text: string;
   url?: string;
   onSubmit?: Function;
-  buttonStyles?: string;
+  buttonColor?: string;
   disabled?: boolean;
   iconURL?: string;
   iconSize?: number;
@@ -16,30 +16,36 @@ const Button: React.FC<ButtonType> = ({
   text,
   url,
   onSubmit,
-  buttonStyles = '',
+  buttonColor = '',
   iconURL,
   iconSize,
   altText,
   disabled,
 }) => {
   const renderButton = () => {
+
+    const textColor = buttonColor ? `text-${buttonColor}` : 'text-black';
     return (
       <button
         disabled={!!disabled}
         className={`
-          hover:drop-shadow-lg
           focus:bg-site-neutral-200 
-          font-serif 
-          font-black 
           bg-site-neutral-100 
           rounded-lg 
           drop-shadow 
           disabled:opacity-50
           disabled:pointer-events-none
           transition-opacity
+          z-[1]
           pl-5
           w-full
-          h-12 ${buttonStyles}`}
+          h-12
+          font-serif 
+          font-bold
+          ${textColor}
+          hover:drop-shadow-xl
+          transform-gpu
+          `}
         onClick={() => {
           if (onSubmit) onSubmit();
         }}
