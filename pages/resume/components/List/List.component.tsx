@@ -8,8 +8,10 @@ export interface ListProps {
 
 const List: React.FC<ListProps> = ({ items, listItemStyles, listStyles }) => {
   const createBulletedList = (): Array<JSX.Element> => {
-    return items.map((item: string) => (
-      <li className={`text-xs ${listItemStyles}`}>{item}</li>
+    return items.map((item: string, index: number) => (
+      <li key={index} className={`text-xs ${listItemStyles}`}>
+        {item}
+      </li>
     ));
   };
   return (
