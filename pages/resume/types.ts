@@ -4,6 +4,7 @@ export interface ResumeCard {
     positions: Array<JobDetails>;
     description: string;
     iconURL: string;
+    altText: string,
 }
 
 export interface JobDetails {
