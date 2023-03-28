@@ -1,7 +1,5 @@
 import React from 'react';
-import IllustratedText from '../illustrated-text/IllustratedText.component';
-//import Image from 'next/image';
-//import ButtonIcon from './components/button-icon/ButtonIcon.component';
+import { IllustratedText } from '../illustrated-text';
 
 export interface ButtonType {
   text: string;
@@ -22,10 +20,12 @@ const Button: React.FC<ButtonType> = ({
   iconURL,
   iconSize,
   altText,
+  disabled,
 }) => {
   const renderButton = () => {
     return (
       <button
+        disabled={!!disabled}
         className={`
           hover:drop-shadow-lg
           focus:bg-site-neutral-200 
@@ -34,9 +34,15 @@ const Button: React.FC<ButtonType> = ({
           bg-site-neutral-100 
           rounded-lg 
           drop-shadow 
+          disabled:opacity-50
+          disabled:pointer-events-none
+          transition-opacity
           pl-5
           w-full
           h-12 ${buttonStyles}`}
+        onClick={() => {
+          if (onSubmit) onSubmit();
+        }}
       >
         <IllustratedText
           iconSize={iconSize}
