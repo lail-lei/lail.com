@@ -48,7 +48,7 @@ const PositionContent: React.FC<JobDetailsType> = ({
           items={tools}
           listStyles={'small-laptop:w-1/2 small-laptop:mb-5'}
         />
-        <FunFact funFacts={funFacts} styles={'small-laptop:w-1/2'} />
+        <FunFact funFacts={funFacts} />
       </div>
     </div>
   );
@@ -59,6 +59,7 @@ const ResumeCard: React.FC<ResumeCardProps> = ({
   positions,
   description,
   iconURL,
+  altText,
   collapsed,
 }) => {
   const mostRecentJobTitle = positions[positions.length - 1].title;
@@ -75,6 +76,7 @@ const ResumeCard: React.FC<ResumeCardProps> = ({
       >
         <IllustratedText
           iconURL={iconURL}
+          altText={altText}
           iconSize={64}
           text={company}
           textStyles={companyNameStyle}
