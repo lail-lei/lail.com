@@ -66,7 +66,8 @@ export const resumeCards: Array<ResumeCardType> = [
     },
 
     {
-        company: 'Viddler',
+
+        company: `Viddler`,
         description: 'A SAAS startup specializing in video marketing software',
         iconURL: '/viddler-icon.png',
         altText: 'video software icon',
@@ -77,8 +78,8 @@ export const resumeCards: Array<ResumeCardType> = [
                 iconURL: '',
                 altText: '',
                 accomplishments: ['Coded prototypes of video-editing and rewards-store applications.'],
-                tools: ['react.js', 'css', 'styled-components'],
                 funFacts: [],
+                tools: ['react.js', 'css', 'styled-components'],
             },
             {
                 title: 'Web Developer',
@@ -89,12 +90,9 @@ export const resumeCards: Array<ResumeCardType> = [
                     'Built tools + web experiences for trade shows'],
                 tools: ['vanilla javascript', 'css/scss', 'html'],
                 funFacts: ['Created a shiba-inu-themed web tool that ranked trade show attendees\' social media prescence. Included fuzzy search.']
-            }
+            },
         ]
 
     },
-
-
-
 
 ];
