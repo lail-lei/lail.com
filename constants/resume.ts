@@ -77,7 +77,7 @@ export const resumeCards: Array<ResumeCardType> = [
                 iconURL: '',
                 altText: '',
                 accomplishments: ['Coded prototypes of video-editing and rewards-store applications.'],
-                tools: ['react.js'],
+                tools: ['react.js', 'css', 'styled-components'],
                 funFacts: [],
             },
             {
