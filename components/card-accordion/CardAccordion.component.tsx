@@ -1,7 +1,4 @@
 import React, { useState } from 'react';
-import ResumeCard from '../../pages/resume/components/ResumeCard/ResumeCard.component';
-import { ResumeCard as ResumeCardType } from '../../pages/resume/types';
-
 
 const CardAccordion: React.FC<{ children: Array<JSX.Element>, width?: string }> = ({ children, width }) => {
     const [expandedItem, setExpandedItem] = useState(0);

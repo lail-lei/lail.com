@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import { Card, Heading, Page } from '../../components';
+import React from 'react';
+import { ResumeCard, Heading, Page } from '../../components';
 import CardAccordion from '../../components/card-accordion/CardAccordion.component';
 import { resumeCards } from '../../constants';
-import ResumeCard from './components/ResumeCard/ResumeCard.component';
-import { ResumeCard as ResumeCardType } from './types';
+import { ResumeCard as ResumeCardType } from '../../types';
 
 function Resume() {
   const renderResumeCards = () => {

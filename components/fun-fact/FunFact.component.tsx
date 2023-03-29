@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Button, Subheading } from '../../../../components';
+import React, { useState } from 'react';
+import { Button, Subheading } from '..';
 
 const FunFact: React.FC<{
   funFacts: Array<string>;

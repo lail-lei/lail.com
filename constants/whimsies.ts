@@ -1,4 +1,4 @@
-import { Whimsy as WhimsyType } from "../pages/whimsy/types";
+import { Whimsy as WhimsyType } from "../types";
 
 export const whimsies: Array<WhimsyType> = [
     {

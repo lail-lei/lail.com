@@ -1,4 +1,4 @@
-import { ResumeCard as ResumeCardType } from "../pages/resume/types";
+import { ResumeCard as ResumeCardType } from "../types";
 
 export const resumeCards: Array<ResumeCardType> = [
     {

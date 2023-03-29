@@ -1,12 +1,12 @@
 import React, { MouseEventHandler } from 'react';
-import { Card, IllustratedText } from '../../../../components';
+import { Card, IllustratedText } from '..';
 import {
   ResumeCard as ResumeCardType,
   JobDetails as JobDetailsType,
 } from '../../types';
-import { FunFact } from '../FunFact';
-import { ResumeList } from '../List';
-import TagList from '../TagList/TagList.component';
+import { FunFact } from '../fun-fact';
+import { ResumeList } from '../l-list';
+import TagList from '../tag-list';
 
 export interface ResumeCardProps extends ResumeCardType {
   onClick?: MouseEventHandler;
