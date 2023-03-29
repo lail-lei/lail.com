@@ -13,6 +13,9 @@ const CardAccordion: React.FC<{ children: Array<JSX.Element>, width?: string }> 
                 accordion-card-transition
                 ${heightClass}`
             } onClick={() => {
+                // TODO - might want to add stop event propagation in child components as well
+                // for expediency, this return should work 
+                if (index === expandedItem) return;
                 // for animation - want to "close" previous accordion item and then expand the newly selected one
                 setExpandedItem(null);
                 setTimeout(() => setExpandedItem(index), 500)
