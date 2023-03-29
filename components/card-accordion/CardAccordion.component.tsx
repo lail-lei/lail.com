@@ -12,7 +12,11 @@ const CardAccordion: React.FC<{ children: Array<JSX.Element>, width?: string }> 
                 cursor-pointer 
                 accordion-card-transition
                 ${heightClass}`
-            } onClick={() => setExpandedItem(index)}>
+            } onClick={() => {
+                // for animation - want to "close" previous accordion item and then expand the newly selected one
+                setExpandedItem(null);
+                setTimeout(() => setExpandedItem(index), 500)
+            }}>
                 {child}
             </div>
 
