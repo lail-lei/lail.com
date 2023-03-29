@@ -16,7 +16,7 @@ function Resume() {
   return (
     <Page pageStyles='gap-10 py-10'>
       <Heading text={'Resume'} />
-      <CardAccordion width='11/12'>{renderResumeCards()}</CardAccordion>
+      <CardAccordion width='11/12 desktop:max-w-[1000px]'>{renderResumeCards()}</CardAccordion>
     </Page>
   );
 }
