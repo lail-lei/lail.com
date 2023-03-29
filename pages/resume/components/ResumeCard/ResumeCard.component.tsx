@@ -73,7 +73,7 @@ const ResumeCard: React.FC<ResumeCardProps> = ({
           altText={altText}
           iconSize={64}
           text={company}
-          textStyles={'text-base font-extrabold w-full'}
+          textStyles={'text-lg small-laptop:text-2xl font-extrabold w-full'}
           subheading
         />
       </div>
