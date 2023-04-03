@@ -1,5 +1,5 @@
 import React from 'react';
-import { ListProps, ResumeList } from '../l-list';
+import { ListProps, ResumeList } from '../list';
 
 const TagList: React.FC<ListProps> = ({
   items,

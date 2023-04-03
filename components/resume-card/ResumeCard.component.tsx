@@ -5,7 +5,7 @@ import {
   JobDetails as JobDetailsType,
 } from '../../types';
 import { FunFact } from '../fun-fact';
-import { ResumeList } from '../l-list';
+import { ResumeList } from '../list';
 import TagList from '../tag-list';
 
 export interface ResumeCardProps extends ResumeCardType {
