@@ -1,1 +1,1 @@
-export {default} from './Whimsy.compoent';
+export {default} from './Whimsy.component';
