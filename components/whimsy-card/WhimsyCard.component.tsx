@@ -20,7 +20,7 @@ const WhimsyCard: React.FC<WhimsyCardType> = ({
 
 
     return (
-        <Card cardStyles={`place-items-start px-5 py-2 ${cardStyles || ''} h-full small-laptop:h-1/3`}>
+        <Card cardStyles={`place-items-start px-5 py-2 ${cardStyles || ''}`}>
             <IllustratedText iconURL={iconURL} text={title} subheading containerStyles='w-full' />
             <p>{description}</p>
             <Button url={url} text={disabled ? 'Coming Soon' : 'Go'} disabled />
