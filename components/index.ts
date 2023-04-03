@@ -11,4 +11,5 @@ export * from './tag-list';
 export * from './resume-card';
 export * from './fun-fact';
 export * from './whimsy-card';
+export * from './back-button';
 

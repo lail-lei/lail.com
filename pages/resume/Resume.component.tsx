@@ -4,6 +4,7 @@ import { ResumeCard, Heading, Page } from '../../components';
 import CardAccordion from '../../components/card-accordion/CardAccordion.component';
 import { resumeCards } from '../../constants';
 import { ResumeCard as ResumeCardType } from '../../types';
+import { BackButton } from '../../components';
 
 function Resume() {
   const renderResumeCards = () => {
@@ -23,6 +24,7 @@ function Resume() {
       <Page pageStyles='gap-10 py-10'>
         <Heading text={'Resume'} />
         <CardAccordion width='11/12 desktop:max-w-[1000px]'>{renderResumeCards()}</CardAccordion>
+        <BackButton />
       </Page>
     </>
   );

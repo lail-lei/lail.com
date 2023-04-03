@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head'
-import { Page, WhimsyCard, Heading } from '../../components';
+import { Page, WhimsyCard, Heading, BackButton } from '../../components';
 import { whimsies } from '../../constants/whimsies';
 import { Whimsy } from '../../types';
 
@@ -20,6 +20,7 @@ function Whimsy() {
         <div className='whimsy-library w-11/12 desktop:max-w-[1250px] h-full grid small-laptop:grid-cols-3 grid-cols-1 gap-3 place-items-start'>
           {renderWhimsies()}
         </div>
+        <BackButton />
       </Page>
     </>
   );
