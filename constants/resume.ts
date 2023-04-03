@@ -20,7 +20,7 @@ export const resumeCards: Array<ResumeCardType> = [
                     'Wrote algorithms to optimize coworker pick path in IKEA stores.',
                     'Collaborated with BE/FS engineers on REST API design.'
                 ],
-                funFacts: ['I like to wear IKEA blue and yellow crocs to the office.'],
+                funFacts: ['I get to wear IKEA blue and yellow crocs to the office.'],
                 tools: ['react.js', 'typescript', 'redux', 'capacitor (by ionic)', 'google analytics'],
             },
             {
