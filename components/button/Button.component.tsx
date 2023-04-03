@@ -23,7 +23,6 @@ const Button: React.FC<ButtonType> = ({
   disabled,
 }) => {
   const renderButton = () => {
-
     const textColor = buttonColor ? `text-${buttonColor}` : 'text-black';
     return (
       <button
@@ -37,7 +36,7 @@ const Button: React.FC<ButtonType> = ({
           disabled:pointer-events-none
           transition-opacity
           z-[1]
-          pl-5
+          px-5
           w-full
           h-12
           font-serif 
