@@ -15,7 +15,7 @@ function Whimsy() {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content="Links to various whimsical side projects" />
       </Head>
-      <Page pageStyles='gap-5'>
+      <Page pageStyles='gap-10 py-10'>
         <Heading text='Whimsies' />
         <div className='whimsy-library w-11/12 desktop:max-w-[1250px] h-full grid small-laptop:grid-cols-3 grid-cols-1 gap-3 place-items-start'>
           {renderWhimsies()}
