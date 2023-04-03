@@ -11,14 +11,13 @@ const CardAccordion: React.FC<{
       const heightClass =
         index === expandedItem
           ? 'max-h-[3000px] h-full overflow-visible'
-          : 'max-h-[70px] overflow-hidden';
+          : 'max-h-[70px] overflow-hidden cursor-pointer ';
       return (
         <div
           key={index}
           className={`
                 accordion-item
                 w-full 
-                cursor-pointer 
                 accordion-card-transition
                 ${heightClass}`}
           onClick={() => {
