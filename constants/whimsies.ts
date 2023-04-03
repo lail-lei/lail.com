@@ -6,7 +6,7 @@ export const whimsies: Array<WhimsyType> = [
         iconURL: '/mood-ring-icon.png',
         altText: 'mood ring',
         title: 'digital mood ring',
-        description: 'a mood ring, coded entirely in css, that changes color based on the expression on your face',
+        description: 'a mood ring, written in css, that changes color based on the expression on your face',
         disabled: true,
     },
 
@@ -14,8 +14,8 @@ export const whimsies: Array<WhimsyType> = [
         url: '',
         iconURL: '/race-icon.png',
         altText: 'race flag',
-        title: 'aeki pick race',
-        description: 'compare various computer-generated pick paths at labyrinthine Norwegian furniture store AEKI',
+        title: 'furniture pick race',
+        description: 'compare various computer-generated pick paths at a labyrinthine Norwegian furniture store',
         disabled: true,
     },
 
